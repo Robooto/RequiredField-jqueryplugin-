@@ -11,18 +11,21 @@
             errorField: "#errorText",
             errorColor: "red"
         }, options);
-
+        // All filled out flag
+        var allFilled = true;
         // Checks if fields are filled out.
         return this.each(function () {
 
             // If field is empty turns red
-            if ($(this).val().length == 0) {
+            if ($(this).val().length === 0) {
                 $(this).css({
                     borderColor: settings.borderColor,
                     backgroundColor: settings.backgroundColor
                 });
                 $(settings.errorField).html(settings.errorText).css(
                     'color', settings.errorColor);
+                // Flip flag when not filled
+                allFilled = false;
             }
             // Field will be normal if filled out
             else {
@@ -34,7 +37,7 @@
 
             }
             // Remove error text when all fields are filled
-            if ($(this).val().length != 0) {
+            if (allFilled === true) {
                 $(settings.errorField).html("");
             }
         });
