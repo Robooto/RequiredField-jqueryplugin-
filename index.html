@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="js/requiredfield.js"></script>
+    <link rel="stylesheet" href="css/jquery-ui-1.10.4.custom.css">
+
+</head>
+
+<body>
+    <style>.box {  width: 200px; }</style>
+<script>
+    $(function() {
+ 
+$('#validate').button().click(function() {
+        $( ".fields" ).requiredfield();
+      });
+    
+});</script>
+
+    <div class="box">
+        <fieldset>
+            <label for="name">Name</label>
+            <input class="fields" type="text" name="name" id="name">
+            <label for="comment">Comment</label>
+            <textarea class="fields" name="comment" id="comment" value=""></textarea>
+            <div id="errorText"></div>
+
+        </fieldset>
+    </div>
+    <button id="validate">Submit</button>
+</body>
+</html>
