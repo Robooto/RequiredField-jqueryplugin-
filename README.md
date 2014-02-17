@@ -49,7 +49,7 @@ $( 'Fields you want to check').requiredfield({
 Demo! 
 ============
 
-http://jsfiddle.net/Robooto/LNnBd/
+http://jsfiddle.net/Robooto/LNnBd/1/
 
 
 Things to do
