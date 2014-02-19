@@ -49,10 +49,10 @@ $( 'Fields you want to check').requiredfield({
 Demo! 
 ============
 
-http://jsfiddle.net/Robooto/LNnBd/1/
+http://jsfiddle.net/Robooto/LNnBd/4/
 
 
 Things to do
 ============
 1. Learn how to format a readme :(
-2. Add support for dropdown and radiobuttons
+2. Add support for radiobuttons
