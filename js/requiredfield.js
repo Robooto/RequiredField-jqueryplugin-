@@ -17,7 +17,7 @@
         return this.each(function () {
 
             // If field is empty turns red
-            if ($(this).val().length === 0) {
+            if ($(this).val().length === 0 && $(this).is(":visible")) {
                 $(this).css({
                     borderColor: settings.borderColor,
                     backgroundColor: settings.backgroundColor
