@@ -34,6 +34,9 @@
                 $(settings.errorField).html("");
             }
         });
+        if (allFilled === false) {
+            preventdefault();
+        }
     };
 
 }(jQuery));
