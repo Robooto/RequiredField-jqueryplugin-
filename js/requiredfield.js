@@ -5,8 +5,7 @@
         // Default options.
         var settings = $.extend({
             // These are the defaults.
-            borderColor: "red",
-            backgroundColor: "#FFCECE",
+            errorClass: "ui-state-error",
             errorText: "Please complete the required fields",
             errorField: "#errorText",
             errorColor: "red"
@@ -18,10 +17,7 @@
 
             // If field is empty turns red
             if ($(this).val().length === 0 && $(this).is(":visible")) {
-                $(this).css({
-                    borderColor: settings.borderColor,
-                    backgroundColor: settings.backgroundColor
-                });
+                $(this).addClass(settings.errorClass);
                 $(settings.errorField).html(settings.errorText).css(
                     'color', settings.errorColor);
                 // Flip flag when not filled
@@ -29,10 +25,7 @@
             }
             // Field will be normal if filled out
             else {
-                $(this).css({
-                    borderColor: "",
-                    backgroundColor: ""
-                });
+                $(this).removeClass(settings.errorClass);
 
 
             }
